@@ -68,9 +68,9 @@ class LoginActivity() : AppCompatActivity() {
         if (result.resultCode == RESULT_OK) {
             // Successfully signed in
             val user = FirebaseAuth.getInstance().currentUser
+            Toast.makeText(this, "Login Sucsess", Toast.LENGTH_SHORT).show()
             var move = Intent(this, MainActivity::class.java)
             startActivity(move)
-            Toast.makeText(this, "Login Sucsess", Toast.LENGTH_SHORT).show()
         } else {
             Toast.makeText(this, "Login Un berhasil", Toast.LENGTH_SHORT).show()
         }

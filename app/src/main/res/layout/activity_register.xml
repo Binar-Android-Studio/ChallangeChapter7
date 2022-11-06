@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.LoginActivity">
+    tools:context=".view.RegisterActivity">
 
     <ScrollView
         style="@style/parent">
@@ -47,7 +47,7 @@
                 <TextView
                     android:textSize="25dp"
                     style="@style/headerText"
-                    android:text="Login Form"
+                    android:text="Register Form"
                     android:layout_marginTop="40dp"/>
                 <LinearLayout
                     android:orientation="vertical"
@@ -67,17 +67,48 @@
                         android:layout_marginTop="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:hint="name"
+                        app:boxStrokeColor="@color/color6"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:hint="username"
+                        app:boxStrokeColor="@color/color6"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="email"
                         app:boxStrokeColor="@color/color6"
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:id="@+id/username"
+                            android:id="@+id/email"
                             />
 
                     </com.google.android.material.textfield.TextInputLayout>
+
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_marginTop="15dp"
                         app:endIconMode="password_toggle"
@@ -95,9 +126,28 @@
                             />
 
                     </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_marginTop="15dp"
+                        app:endIconMode="password_toggle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="repeat password"
+                        app:boxStrokeColor="@color/color6"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:id="@+id/password2"
+                            />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
                     <Button
-                        android:id="@+id/btnLogin"
-                        android:text="login"
+                        android:id="@+id/btnregister"
+                        android:text="register"
                         android:textAllCaps="false"
                         android:textColor="@color/color33"
                         android:layout_marginTop="15dp"
@@ -105,36 +155,16 @@
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/color6"
                         />
-                    <!--                    <LinearLayout-->
-                    <!--                        android:layout_marginTop="15dp"-->
-                    <!--                        android:id="@+id/btnLoginGoogle"-->
-                    <!--                        android:layout_width="match_parent"-->
-                    <!--                        android:layout_height="wrap_content">-->
-                    <!--                        <ImageView-->
-                    <!--                            android:layout_marginLeft="20dp"-->
-                    <!--                            android:padding="10dp"-->
-                    <!--                            android:layout_width="45dp"-->
-                    <!--                            android:layout_height="45dp"-->
-                    <!--                            android:src="@drawable/googleicon"/>-->
-                    <!--                        <TextView-->
-                    <!--                            android:layout_marginLeft="10dp"-->
-                    <!--                            android:layout_marginTop="7dp"-->
-                    <!--                            android:textSize="20dp"-->
-                    <!--                            android:layout_width="match_parent"-->
-                    <!--                            android:layout_height="wrap_content"-->
-                    <!--                            android:text="Sign In With Google"-->
-                    <!--                            android:textColor="@color/black"/>-->
-                    <!--                    </LinearLayout>-->
                     <Button
-
-                        android:text="Sign In With Google"
+                        android:id="@+id/btnSignUpGoogle"
+                        android:text="Sign Up With Google"
                         android:textAllCaps="false"
                         android:textColor="@color/black"
-                        android:id="@+id/btnLoginGoogle"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:backgroundTint="@color/white"
                         />
+
                     <LinearLayout
                         android:layout_marginBottom="35dp"
                         android:layout_marginTop="10dp"
@@ -145,13 +175,13 @@
                             android:textColor="@color/black"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="belum memiliki akun?"/>
+                            android:text="sudah memiliki akun?"/>
                         <TextView
-                            android:id="@+id/register"
+                            android:id="@+id/logintriger"
                             android:textColor="@color/color6"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text=" daftar disini"
+                            android:text=" login disini"
                             android:textStyle="bold"/>
 
                     </LinearLayout>
@@ -163,6 +193,5 @@
         </RelativeLayout>
 
     </ScrollView>
-
 
 </RelativeLayout>
